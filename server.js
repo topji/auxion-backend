@@ -367,7 +367,7 @@ app.post('/api/sendForAuthorization', async (req, res) => {
   }
 });
 
-const PORT = process.env.PORT || 6969;
+const PORT = process.env.PORT || 3005;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
