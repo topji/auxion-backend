@@ -9,15 +9,8 @@ dotenv.config();
 
 const app = express();
 
-// CORS configuration with allowed origins from env
-const corsOptions = {
-  origin: process.env.ALLOWED_ORIGINS.split(','),
-  methods: ['GET', 'POST'],
-  credentials: true,
-  optionsSuccessStatus: 200
-};
-
-app.use(cors(corsOptions));
+// Enable CORS for all origins
+app.use(cors());
 app.use(express.json());
 
 // MongoDB connection
